@@ -69,12 +69,12 @@ class ListPageState extends State<ListPage> {
   Widget _buildSubMenuList() {
     List<Widget> tiles = [];
     for (var item in widget.subMenuList) {
-      tiles.add(_buildSubMenuItem(item["title"]));
+      tiles.add(_buildSubMenuItem(item["title"], item["route"]));
     }
     return Column(children: tiles);
   }
 
-  Widget _buildSubMenuItem(String title) {
+  Widget _buildSubMenuItem(String title, Widget route) {
     return Container(
       padding: EdgeInsets.all(0.0),
       margin: EdgeInsets.symmetric(vertical: 0.0, horizontal: 30.0),
@@ -91,6 +91,14 @@ class ListPageState extends State<ListPage> {
           Icons.arrow_forward_ios,
           size: 16.0,
         ),
+        onTap: () {
+          if (route != null) {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (BuildContext context) {
+              return route;
+            }));
+          }
+        },
       ),
     );
   }

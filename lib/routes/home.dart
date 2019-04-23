@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'list.dart';
+import 'basics/colors.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -45,7 +46,12 @@ class HomePageState extends State<HomePage> {
         "title": "基础",
         "subtitle": "包含颜色、文本、图标等",
         "subMenuList": [
-          {"title": "Color 颜色"},
+          {
+            "title": "Color 颜色",
+            "route": new ColorsPage(
+              title: "Color 颜色",
+            )
+          },
           {"title": "Icon 图标"},
           {"title": "Font 字体"},
           {"title": "Button 按钮"}
