@@ -12,8 +12,6 @@
 <div style="display:flex">
 <img src="./screenshots/screenshots_4.png" width="240" />
 <img src="./screenshots/screenshots_5.png" width="240" />
+<img src="./screenshots/screenshots_6.png" width="240" />
 </div>
 
-## 目前进度
-
-目前只完成了首页的主菜单和子菜单列表,接下来逐步完善各个组件的代码

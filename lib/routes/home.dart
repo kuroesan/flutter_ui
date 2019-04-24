@@ -3,6 +3,19 @@ import 'list.dart';
 import 'basics/colors.dart';
 import 'basics/icons.dart';
 import 'basics/buttons.dart';
+import 'view/avatar.dart';
+import 'view/article.dart';
+import 'view/badge.dart';
+import 'view/countdown.dart';
+import 'view/curtain.dart';
+import 'view/divider.dart';
+import 'view/loadmore.dart';
+import 'view/noticebar.dart';
+import 'view/steps.dart';
+import 'view/swiper.dart';
+import 'view/tags.dart';
+import 'view/timeline.dart';
+// import '../widgets/drawerWidget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -20,6 +33,7 @@ class HomePageState extends State<HomePage> {
         appBar: AppBar(
           title: Text(widget.title),
         ),
+        // drawer: AuthorInfoDrawer(),
         backgroundColor: Color.fromRGBO(248, 248, 248, 1),
         body: ListView(
           padding: EdgeInsets.all(17.0),
@@ -46,7 +60,7 @@ class HomePageState extends State<HomePage> {
       {
         "icon": Icons.translate,
         "title": "基础",
-        "subtitle": "包含颜色、文本、图标等",
+        "subtitle": "包含颜色、图标、按钮等",
         "subMenuList": [
           {
             "title": "Color 颜色",
@@ -60,7 +74,6 @@ class HomePageState extends State<HomePage> {
               title: "Icon 图标",
             )
           },
-          {"title": "Font 字体"},
           {
             "title": "Button 按钮",
             "route": new ButtonsPage(
@@ -74,18 +87,78 @@ class HomePageState extends State<HomePage> {
         "title": "视图",
         "subtitle": "包含通告栏、标签、徽标等",
         "subMenuList": [
-          {"title": "Avatar 头像"},
-          {"title": "Article 文章"},
-          {"title": "Badge 徽标"},
-          {"title": "CountDown 倒计时"},
-          {"title": "Curtain 幕帘"},
-          {"title": "Divider 分割线"},
-          {"title": "NoticeBar 通告栏"},
-          {"title": "Tag 标签"},
-          {"title": "Timeline 时间轴"},
-          {"title": "Swiper 滑块视图容器"},
-          {"title": "Load-More 页面提示"},
-          {"title": "Steps 步骤条"},
+          {
+            "title": "Avatar 头像",
+            "route": new AvatarPage(
+              title: "Avatar 头像",
+            )
+          },
+          {
+            "title": "Article 文章",
+            "route": new ArticlePage(
+              title: "Article 文章",
+            ),
+          },
+          {
+            "title": "Badge 徽标",
+            "route": new BadgePage(
+              title: "Badge 徽标",
+            )
+          },
+          {
+            "title": "CountDown 倒计时",
+            "route": new CountDownPage(
+              title: "CountDown 倒计时",
+            )
+          },
+          {
+            "title": "Curtain 幕帘",
+            "route": new CurtainPage(
+              title: "Curtain 幕帘",
+            )
+          },
+          {
+            "title": "Divider 分割线",
+            "route": new DividerPage(
+              title: "Divider 分割线",
+            )
+          },
+          {
+            "title": "NoticeBar 通告栏",
+            "route": new NoticeBarPage(
+              title: "NoticeBar 通告栏",
+            )
+          },
+          {
+            "title": "Tag 标签",
+            "route": new TagsPage(
+              title: "Tag 标签",
+            )
+          },
+          {
+            "title": "Timeline 时间轴",
+            "route": new TimeLinePage(
+              title: "Timeline 时间轴",
+            )
+          },
+          {
+            "title": "Swiper 滑块视图容器",
+            "route": new SwiperPage(
+              title: "Swiper 滑块视图容器",
+            )
+          },
+          {
+            "title": "Load-More 页面提示",
+            "route": new LoadMorePage(
+              title: "Load-More 页面提示",
+            )
+          },
+          {
+            "title": "Steps 步骤条",
+            "route": new StepsPage(
+              title: "Steps 步骤条",
+            )
+          },
         ]
       },
       {
@@ -246,10 +319,34 @@ class HomePageState extends State<HomePage> {
           ),
         ),
         onTap: () {
-          Navigator.push(context,
-              MaterialPageRoute(builder: (BuildContext context) {
-            return ListPage(title: title, icon: icon, subMenuList: subMenuList);
-          }));
+          Navigator.push(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (BuildContext context, Animation<double> animation,
+                    Animation<double> secondaryAnimation) {
+                  return ListPage(
+                      title: title, icon: icon, subMenuList: subMenuList);
+                },
+                transitionsBuilder: (
+                  BuildContext context,
+                  Animation<double> animation,
+                  Animation<double> secondaryAnimation,
+                  Widget child,
+                ) {
+                  return HomePageState.createTransition(animation, child);
+                },
+              ));
         });
+  }
+
+  static SlideTransition createTransition(
+      Animation<double> animation, Widget child) {
+    return new SlideTransition(
+      position: new Tween<Offset>(
+        begin: const Offset(1.0, 0.0),
+        end: const Offset(0.0, 0.0),
+      ).animate(animation),
+      child: child,
+    );
   }
 }
