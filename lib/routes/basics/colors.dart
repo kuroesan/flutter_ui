@@ -2,16 +2,11 @@ import 'package:flutter/material.dart';
 import '../../widgets/titleWidget.dart';
 import '../../widgets/subTitleWidget.dart';
 
-class ColorsPage extends StatefulWidget {
+class ColorsPage extends StatelessWidget {
   ColorsPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
-  @override
-  ColorsPageState createState() => new ColorsPageState();
-}
-
-class ColorsPageState extends State<ColorsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +20,7 @@ class ColorsPageState extends State<ColorsPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                TitleWidget(title: widget.title),
+                TitleWidget(title: title),
                 SubTitle(title: "White"),
                 Container(
                   color: Colors.black87,

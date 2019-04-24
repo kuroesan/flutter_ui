@@ -3,16 +3,11 @@ import '../../model/myIcons.dart';
 import '../../widgets/titleWidget.dart';
 import '../../widgets/subTitleWidget.dart';
 
-class IconsPage extends StatefulWidget {
-  IconsPage({Key key, this.title});
+class IconsPage extends StatelessWidget {
+  IconsPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
-  @override
-  IconPageState createState() => new IconPageState();
-}
-
-class IconPageState extends State<IconsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +20,7 @@ class IconPageState extends State<IconsPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              TitleWidget(title: widget.title),
+              TitleWidget(title: title),
               SubTitle(title: "Material 图标"),
               Container(
                 margin: EdgeInsets.symmetric(vertical: 10.0),

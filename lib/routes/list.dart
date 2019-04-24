@@ -93,13 +93,37 @@ class ListPageState extends State<ListPage> {
         ),
         onTap: () {
           if (route != null) {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (BuildContext context) {
-              return route;
-            }));
+            Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (BuildContext context,
+                      Animation<double> animation,
+                      Animation<double> secondaryAnimation) {
+                    return route;
+                  },
+                  transitionsBuilder: (
+                    BuildContext context,
+                    Animation<double> animation,
+                    Animation<double> secondaryAnimation,
+                    Widget child,
+                  ) {
+                    return ListPageState.createTransition(animation, child);
+                  },
+                ));
           }
         },
       ),
+    );
+  }
+
+  static SlideTransition createTransition(
+      Animation<double> animation, Widget child) {
+    return new SlideTransition(
+      position: new Tween<Offset>(
+        begin: const Offset(1.0, 0.0),
+        end: const Offset(0.0, 0.0),
+      ).animate(animation),
+      child: child,
     );
   }
 }
