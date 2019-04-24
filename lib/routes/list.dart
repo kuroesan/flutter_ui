@@ -51,7 +51,7 @@ class ListPageState extends State<ListPage> {
                     child: Text(
                       widget.title,
                       style: TextStyle(
-                        fontSize: 22.0,
+                        fontSize: 20.0,
                         color: Color.fromRGBO(115, 162, 248, 1),
                       ),
                     ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'list.dart';
 import 'basics/colors.dart';
+import 'basics/icons.dart';
+import 'basics/buttons.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -52,9 +54,19 @@ class HomePageState extends State<HomePage> {
               title: "Color 颜色",
             )
           },
-          {"title": "Icon 图标"},
+          {
+            "title": "Icon 图标",
+            "route": new IconsPage(
+              title: "Icon 图标",
+            )
+          },
           {"title": "Font 字体"},
-          {"title": "Button 按钮"}
+          {
+            "title": "Button 按钮",
+            "route": new ButtonsPage(
+              title: "Button 按钮",
+            )
+          }
         ]
       },
       {
@@ -188,22 +200,24 @@ class HomePageState extends State<HomePage> {
                 flex: 1,
                 child: Container(
                   margin: EdgeInsets.only(left: 17.0),
-                  padding: EdgeInsets.only(top: 13.0),
+                  padding: EdgeInsets.only(top: 15.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       new Text(title,
-                          textAlign: TextAlign.left,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             color: Colors.black54,
-                            fontSize: 18.0,
+                            fontSize: 16.0,
                             fontWeight: FontWeight.bold,
                           )),
                       new Text(subtitle,
-                          textAlign: TextAlign.left,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: TextStyle(
                             color: Colors.black38,
-                            fontSize: 14.0,
+                            fontSize: 12.0,
                           ))
                     ],
                   ),
