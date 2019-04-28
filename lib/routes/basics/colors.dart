@@ -22,214 +22,147 @@ class ColorsPage extends StatelessWidget {
               children: <Widget>[
                 TitleWidget(title: title),
                 SubTitle(title: "White"),
-                Container(
-                  color: Colors.black87,
-                  padding:
-                      EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(
-                          ringColor: Colors.white,
-                          name: "white",
-                          isWhite: true),
-                      ColorRing(
-                          ringColor: Colors.white10,
-                          name: "white10",
-                          isWhite: true),
-                      ColorRing(
-                          ringColor: Colors.white12,
-                          name: "white12",
-                          isWhite: true),
-                      ColorRing(
-                          ringColor: Colors.white30,
-                          name: "white30",
-                          isWhite: true),
-                      ColorRing(
-                          ringColor: Colors.white70,
-                          name: "white70",
-                          isWhite: true),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.white, "name": "white", "isWhite": true},
+                  {
+                    "ringColor": Colors.white10,
+                    "name": "white10",
+                    "isWhite": true
+                  },
+                  {
+                    "ringColor": Colors.white12,
+                    "name": "white12",
+                    "isWhite": true
+                  },
+                  {
+                    "ringColor": Colors.white30,
+                    "name": "white30",
+                    "isWhite": true
+                  },
+                  {
+                    "ringColor": Colors.white70,
+                    "name": "white70",
+                    "isWhite": true
+                  }
+                ], isWhite: true),
                 SubTitle(title: "Black"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(ringColor: Colors.black, name: "black"),
-                      ColorRing(ringColor: Colors.black12, name: "black12"),
-                      ColorRing(ringColor: Colors.black26, name: "black26"),
-                      ColorRing(ringColor: Colors.black38, name: "black38"),
-                      ColorRing(ringColor: Colors.black45, name: "black45"),
-                      ColorRing(ringColor: Colors.black54, name: "black54"),
-                      ColorRing(ringColor: Colors.black87, name: "black87"),
-                      ColorRing(ringColor: Colors.grey, name: "grey"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.black, "name": "black"},
+                  {"ringColor": Colors.black12, "name": "black12"},
+                  {"ringColor": Colors.black26, "name": "black26"},
+                  {"ringColor": Colors.black38, "name": "black38"},
+                  {"ringColor": Colors.black45, "name": "black45"},
+                  {"ringColor": Colors.black54, "name": "black54"},
+                  {"ringColor": Colors.black87, "name": "black87"},
+                  {"ringColor": Colors.grey, "name": "grey"}
+                ]),
                 SubTitle(title: "Yellow"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(ringColor: Colors.amber, name: "amber"),
-                      ColorRing(
-                          ringColor: Colors.amberAccent, name: "amberAccent"),
-                      ColorRing(ringColor: Colors.yellow, name: "yellow"),
-                      ColorRing(
-                          ringColor: Colors.yellowAccent, name: "yellowAccent"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.amber, "name": "amber"},
+                  {"ringColor": Colors.amberAccent, "name": "amberAccent"},
+                  {"ringColor": Colors.yellow, "name": "yellow"},
+                  {"ringColor": Colors.yellowAccent, "name": "yellowAccent"},
+                ]),
                 SubTitle(title: "Blue"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(ringColor: Colors.blue, name: "blue"),
-                      ColorRing(
-                          ringColor: Colors.blueAccent, name: "blueAccent"),
-                      ColorRing(ringColor: Colors.blueGrey, name: "blueGrey"),
-                      ColorRing(ringColor: Colors.cyan, name: "cyan"),
-                      ColorRing(
-                          ringColor: Colors.cyanAccent, name: "cyanAccent"),
-                      ColorRing(ringColor: Colors.indigo, name: "indigo"),
-                      ColorRing(
-                          ringColor: Colors.indigoAccent, name: "indigoAccent"),
-                      ColorRing(ringColor: Colors.lightBlue, name: "lightBlue"),
-                      ColorRing(
-                          ringColor: Colors.lightBlueAccent,
-                          name: "lightBlueAccent"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.blue, "name": "blue"},
+                  {"ringColor": Colors.blueAccent, "name": "blueAccent"},
+                  {"ringColor": Colors.cyan, "name": "cyan"},
+                  {"ringColor": Colors.cyanAccent, "name": "cyanAccent"},
+                  {"ringColor": Colors.indigo, "name": "indigo"},
+                  {"ringColor": Colors.indigoAccent, "name": "indigoAccent"},
+                  {"ringColor": Colors.lightBlue, "name": "lightBlue"},
+                  {
+                    "ringColor": Colors.lightBlueAccent,
+                    "name": "lightBlueAccent"
+                  },
+                ]),
                 SubTitle(title: "Orange"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(
-                          ringColor: Colors.deepOrange, name: "deepOrange"),
-                      ColorRing(
-                          ringColor: Colors.deepOrangeAccent,
-                          name: "deepOrangeAccent"),
-                      ColorRing(ringColor: Colors.orange, name: "orange"),
-                      ColorRing(
-                          ringColor: Colors.orangeAccent, name: "orangeAccent"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.deepOrange, "name": "deepOrange"},
+                  {
+                    "ringColor": Colors.deepOrangeAccent,
+                    "name": "deepOrangeAccent"
+                  },
+                  {"ringColor": Colors.orange, "name": "orange"},
+                  {"ringColor": Colors.orangeAccent, "name": "orangeAccent"},
+                ]),
                 SubTitle(title: "Purple"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(
-                          ringColor: Colors.deepPurple, name: "deepPurple"),
-                      ColorRing(
-                          ringColor: Colors.deepPurpleAccent,
-                          name: "bldeepPurpleAccentack"),
-                      ColorRing(ringColor: Colors.purple, name: "purple"),
-                      ColorRing(
-                          ringColor: Colors.purpleAccent, name: "purpleAccent"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.deepPurple, "name": "deepPurple"},
+                  {
+                    "ringColor": Colors.deepPurpleAccent,
+                    "name": "deepPurpleAccent"
+                  },
+                  {"ringColor": Colors.purple, "name": "purple"},
+                  {"ringColor": Colors.purpleAccent, "name": "purpleAccent"},
+                ]),
                 SubTitle(title: "Green"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(ringColor: Colors.green, name: "green"),
-                      ColorRing(
-                          ringColor: Colors.greenAccent, name: "greenAccent"),
-                      ColorRing(
-                          ringColor: Colors.lightGreen, name: "lightGreen"),
-                      ColorRing(
-                          ringColor: Colors.lightGreenAccent,
-                          name: "lightGreenAccent"),
-                      ColorRing(ringColor: Colors.lime, name: "lime"),
-                      ColorRing(
-                          ringColor: Colors.limeAccent, name: "limeAccent"),
-                      ColorRing(ringColor: Colors.teal, name: "teal"),
-                      ColorRing(
-                          ringColor: Colors.tealAccent, name: "tealAccent"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.green, "name": "green"},
+                  {"ringColor": Colors.greenAccent, "name": "greenAccent"},
+                  {"ringColor": Colors.lightGreen, "name": "lightGreen"},
+                  {
+                    "ringColor": Colors.lightGreenAccent,
+                    "name": "lightGreenAccent"
+                  },
+                  {"ringColor": Colors.lime, "name": "lime"},
+                  {"ringColor": Colors.limeAccent, "name": "limeAccent"},
+                  {"ringColor": Colors.teal, "name": "teal"},
+                  {"ringColor": Colors.tealAccent, "name": "tealAccent"},
+                ]),
                 SubTitle(title: "Pink"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(ringColor: Colors.pink, name: "pink"),
-                      ColorRing(
-                          ringColor: Colors.pinkAccent, name: "pinkAccent"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.pink, "name": "pink"},
+                  {"ringColor": Colors.pinkAccent, "name": "pinkAccent"},
+                ]),
                 SubTitle(title: "Red"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(ringColor: Colors.red, name: "red"),
-                      ColorRing(ringColor: Colors.redAccent, name: "redAccent"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.red, "name": "red"},
+                  {"ringColor": Colors.redAccent, "name": "redAccent"},
+                ]),
                 SubTitle(title: "Brown"),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 20.0),
-                  padding: EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Wrap(
-                    spacing: 28.0,
-                    runSpacing: 20.0,
-                    alignment: WrapAlignment.start,
-                    children: <Widget>[
-                      ColorRing(ringColor: Colors.brown, name: "brown"),
-                    ],
-                  ),
-                ),
+                ColorRingList(colorList: [
+                  {"ringColor": Colors.brown, "name": "brown"},
+                ]),
               ],
             ),
           ),
         ));
+  }
+}
+
+class ColorRingList extends StatelessWidget {
+  ColorRingList({this.colorList, this.isWhite: false});
+
+  final List colorList;
+  final bool isWhite;
+
+  @override
+  Widget build(BuildContext context) {
+    List<Widget> tiles = [];
+    for (var item in colorList) {
+      if (item["isWhite"] != null && item["isWhite"]) {
+        tiles.add(ColorRing(
+            ringColor: item["ringColor"],
+            name: item["name"],
+            isWhite: item["isWhite"] || false));
+      } else {
+        tiles.add(ColorRing(ringColor: item["ringColor"], name: item["name"]));
+      }
+    }
+
+    return Container(
+      color: isWhite ? Colors.black87 : Colors.white,
+      width: double.infinity,
+      padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 40.0),
+      child: Wrap(
+        spacing: 28.0,
+        runSpacing: 20.0,
+        alignment: WrapAlignment.start,
+        children: tiles,
+      ),
+    );
   }
 }
 
@@ -281,10 +214,16 @@ class ColorRing extends StatelessWidget {
               ],
             ),
           ),
-          Text(
-            name,
-            style: TextStyle(
-              color: isWhite ? Colors.white : Colors.black,
+          Container(
+            width: 90.0,
+            child: Text(
+              name,
+              maxLines: 1,
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                color: isWhite ? Colors.white : Colors.black,
+              ),
             ),
           )
         ],
