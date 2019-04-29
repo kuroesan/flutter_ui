@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/flutter_ui.dart';
 import '../../widgets/titleWidget.dart';
 import '../../widgets/subTitleWidget.dart';
-import '../../src/utils/ScreenUtil.dart';
 
 class AvatarPage extends StatelessWidget {
   AvatarPage({Key key, this.title}) : super(key: key);
@@ -27,17 +27,17 @@ class AvatarPage extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       margin: EdgeInsets.only(left: 30.0),
-                      child: FUAvatar(
+                      child: FuAvatar(
                         size: "small",
                       ),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 30.0),
-                      child: FUAvatar(),
+                      child: FuAvatar(),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 30.0),
-                      child: FUAvatar(
+                      child: FuAvatar(
                         size: "large",
                       ),
                     )
@@ -50,15 +50,15 @@ class AvatarPage extends StatelessWidget {
                   children: <Widget>[
                     Container(
                       margin: EdgeInsets.only(left: 30.0),
-                      child: FUAvatar(size: "small", type: "rect"),
+                      child: FuAvatar(size: "small", type: "rect"),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 30.0),
-                      child: FUAvatar(type: "rect"),
+                      child: FuAvatar(type: "rect"),
                     ),
                     Container(
                       margin: EdgeInsets.only(left: 30.0),
-                      child: FUAvatar(size: "large", type: "rect"),
+                      child: FuAvatar(size: "large", type: "rect"),
                     ),
                   ],
                 ),
@@ -68,44 +68,5 @@ class AvatarPage extends StatelessWidget {
         ),
       ),
     );
-  }
-}
-
-class FUAvatar extends StatelessWidget {
-  FUAvatar(
-      {this.size = "default",
-      this.type = "circle",
-      this.image = "assets/images/flutter_logo_bg.png"});
-  final String size;
-  final String type;
-  final String image;
-
-  @override
-  Widget build(BuildContext context) {
-    var avatarWidth = 72.0;
-    if (this.size == "small") {
-      avatarWidth = ScreenUtil.px(116.0);
-    } else if (this.size == "large") {
-      avatarWidth = ScreenUtil.px(168.0);
-    } else {
-      avatarWidth = ScreenUtil.px(144.0);
-    }
-
-    return this.type == "circle"
-        ? ClipOval(
-            child: Container(
-              child: Image.asset(
-                this.image,
-                width: avatarWidth,
-              ),
-            ),
-          )
-        : ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(10.0)),
-            child: Image.asset(
-              this.image,
-              width: avatarWidth,
-            ),
-          );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/flutter_ui.dart';
 import '../../widgets/titleWidget.dart';
 import '../../widgets/subTitleWidget.dart';
 
@@ -20,6 +21,16 @@ class ButtonsPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               TitleWidget(title: title),
+              SubTitle(title: "Primary Button"),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 30.0),
+                child: FuButton(
+                  text: "Primary Button",
+                  shadow: true,
+                  size: "small",
+                  disabled: true,
+                ),
+              ),
               SubTitle(title: "RaisedButton"),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 30.0),
