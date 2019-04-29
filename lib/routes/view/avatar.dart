@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/titleWidget.dart';
 import '../../widgets/subTitleWidget.dart';
+import '../../utils/ScreenUtil.dart';
 
 class AvatarPage extends StatelessWidget {
   AvatarPage({Key key, this.title}) : super(key: key);
@@ -83,11 +84,11 @@ class FUAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     var avatarWidth = 72.0;
     if (this.size == "small") {
-      avatarWidth = 58.0;
+      avatarWidth = ScreenUtil.px(116.0);
     } else if (this.size == "large") {
-      avatarWidth = 84.0;
+      avatarWidth = ScreenUtil.px(168.0);
     } else {
-      avatarWidth = 72.0;
+      avatarWidth = ScreenUtil.px(144.0);
     }
 
     return this.type == "circle"
