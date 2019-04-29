@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/titleWidget.dart';
 import '../../widgets/subTitleWidget.dart';
-import '../../utils/ScreenUtil.dart';
+import '../../src/utils/ScreenUtil.dart';
 
 class AvatarPage extends StatelessWidget {
   AvatarPage({Key key, this.title}) : super(key: key);
