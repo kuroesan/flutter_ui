@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/titleWidget.dart';
 import '../../widgets/subTitleWidget.dart';
+import '../../utils/ScreenUtil.dart';
 
 class ColorsPage extends StatelessWidget {
   ColorsPage({Key key, this.title}) : super(key: key);
@@ -179,8 +180,8 @@ class ColorRing extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Container(
-            width: 90.0,
-            height: 90.0,
+            width: ScreenUtil.px(150.0),
+            height: ScreenUtil.px(150.0),
             margin: EdgeInsets.only(bottom: 12.0),
             decoration: BoxDecoration(
                 color: ringColor,
@@ -191,8 +192,8 @@ class ColorRing extends StatelessWidget {
               alignment: Alignment.center,
               children: <Widget>[
                 Container(
-                  width: 60.0,
-                  height: 60.0,
+                  width: ScreenUtil.px(110.0),
+                  height: ScreenUtil.px(110.0),
                   decoration: BoxDecoration(
                       color: isWhite ? Colors.black87 : Colors.white,
                       borderRadius: BorderRadius.all(
@@ -200,8 +201,8 @@ class ColorRing extends StatelessWidget {
                       )),
                 ),
                 Container(
-                  width: 40.0,
-                  height: 40.0,
+                  width: ScreenUtil.px(60.0),
+                  height: ScreenUtil.px(60.0),
                   decoration: BoxDecoration(
                       color: isWhite ? Colors.black87 : Colors.white,
                       border: Border.all(

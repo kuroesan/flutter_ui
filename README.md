@@ -20,6 +20,6 @@
 
 <div style="display:flex">
 <img src="./screenshots/screenshots_7.png" width="240" />
-
+<img src="./screenshots/screenshots_8.png" width="240" />
 </div>
 
